@@ -7,9 +7,117 @@ body {
     background-image: url('discobg.jpg'); /* Disco background from Unsplash */
     background-size: cover;
     background-position: center;
-    overflow: hidden;
 }
-
+.lightsCont {
+    position: relative;
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+    height: 150px;
+    z-index: 2;
+    top: -50px;
+  }
+  .lightFixtureCont {
+    position: absolute;
+    display: block;
+    width: fit-content;
+    height: fit-content;
+    transform-origin: top center;
+    transform: rotate(0deg);
+    transition: transform 1s ease-out;
+  }
+  
+  .lightFixtureCont:nth-of-type(1) {
+    left: 120px;
+    transform: rotate(35deg);
+  }
+  
+  .lightFixtureCont:nth-of-type(2) {
+    left: 260px;
+    transform: rotate(-35deg);
+  }
+  
+  .lightFixtureCont:nth-of-type(3) {
+    right: 260px;
+    transform: rotate(35deg);
+  }
+  
+  .lightFixtureCont:nth-of-type(4) {
+    right: 120px;
+    transform: rotate(-35deg);
+  }
+  
+  .lightAnimation:nth-of-type(1),
+  .lightAnimation:nth-of-type(3) {
+    animation: rotateAnimation 2s ease-in-out infinite alternate;
+  }
+  
+  .lightAnimation:nth-of-type(2),
+  .lightAnimation:nth-of-type(4) {
+    animation: rotateAnimation2 2s ease-in-out infinite alternate;
+  }
+  
+  @keyframes rotateAnimation {
+    0% {
+      transform: rotate(35deg);
+    }
+    100% {
+      transform: rotate(-35deg);
+    }
+  }
+  
+  @keyframes rotateAnimation2 {
+    0% {
+      transform: rotate(-35deg);
+    }
+    100% {
+      transform: rotate(35deg);
+    }
+  }
+  
+  .lightFixtureBeam {
+    position: relative;
+    z-index: 11;
+    width: 50px;
+    height: 100vw;
+    margin-top: -10px;
+    margin-left: -0px;
+    border: none;
+    opacity: 0.5;
+    transform: perspective(100px) rotateX(24deg);
+    transform-origin: top center;
+  }
+  
+  .lightFixtureFace {
+    position: relative;
+    width: 45px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid white;
+    background: #222;
+    margin-left: 2px;
+    z-index: 10;
+  }
+  
+  .lightFixtureBody {
+    width: 50px;
+    height: 60px;
+    margin-top: -15px;
+    margin-bottom: -10px;
+    border: 1px solid grey;
+    border-top: none;
+    border-bottom: none;
+    background: linear-gradient(to right, #000 0%, #444 10%, #444 90%, #000 100%);
+  }
+  
+  .lightFixtureBottom {
+    width: 50px;
+    height: 30px;
+    border-radius: 50%;
+    border-bottom: 2px solid grey;
+    background: linear-gradient(to right, #000 0%, #444 10%, #444 90%, #000 100%);
+  }
+  
 .container {
     max-width: 800px;
     margin: 50px auto;
@@ -17,6 +125,7 @@ body {
     background: rgba(0, 0, 0, 0.8); /* Semi-transparent black background for the container */
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); /* Add a glowing effect */
+
 }
 
 header {
@@ -65,6 +174,7 @@ label {
 }
 
 button {
+    font-family: 'Press Start 2P', cursive; /* Add a retro font */
     background-color: #00f5d4; /* Neon cyan */
     color: black;
     border: none;
@@ -92,3 +202,4 @@ footer {
 label:hover {
     text-shadow: 0 0 5px #ff006e, 0 0 10px #fce22a; /* Sparkle effect */
 }
+

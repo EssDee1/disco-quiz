@@ -103,6 +103,62 @@ const questions = [
     // Add more questions as needed
 ];
 
+document.addEventListener("DOMContentLoaded", function () {
+  // Light color cycling logic
+  var currentColorIndex = 0;
+  var discoLightsIntervalId = null;
+
+  var colorPairs = [
+      { hex: "#FF0000", name: "Bright Red" },
+      { hex: "#00FF00", name: "Neon Green" },
+      { hex: "#0000FF", name: "Electric Blue" },
+      { hex: "#FFA500", name: "Vibrant Orange" },
+      { hex: "#FFFF00", name: "Lemon Yellow" },
+      { hex: "#FF00FF", name: "Hot Pink" },
+      { hex: "#00FFFF", name: "Neon Cyan" },
+      { hex: "#800080", name: "Bright Purple" },
+      { hex: "#FF1493", name: "Neon Pink" },
+      { hex: "#FFD700", name: "Golden Yellow" },
+      { hex: "#00FF7F", name: "Bright Spring Green" },
+      { hex: "#FF4500", name: "Bright Orange-Red" },
+      { hex: "#FF69B4", name: "Vivid Pink" },
+      { hex: "#FF00FF", name: "Fuchsia" }
+  ];
+
+  function setFixtureColor(fixtureID, colorHex) {
+      var faceElement = document.querySelector("#" + fixtureID + " .lightFixtureFace");
+      var beamElement = document.querySelector("#" + fixtureID + " .lightFixtureBeam");
+
+      if (faceElement && beamElement) {
+          faceElement.style.background = colorHex;
+          beamElement.style.background = `linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, ${colorHex} 20%, ${colorHex} 80%, rgba(0, 0, 0, 0) 100%)`;
+      }
+  }
+
+  function cycleColors() {
+      for (var i = 1; i <= 4; i++) {
+          setFixtureColor(
+              "lightFixture" + i,
+              colorPairs[(currentColorIndex + i - 1) % colorPairs.length].hex
+          );
+      }
+      currentColorIndex = (currentColorIndex - 1 + colorPairs.length) % colorPairs.length;
+  }
+
+  function startDisco() {
+      if (!discoLightsIntervalId) {
+          discoLightsIntervalId = setInterval(cycleColors, 600); 
+          var lightFixtures = document.querySelectorAll('.lightFixtureCont');
+          lightFixtures.forEach(function (fixture) {
+              fixture.classList.add('lightAnimation');
+          });
+      }
+  }
+
+  startDisco();  // Start the disco lights automatically when the page loads
+});
+
+
 let currentQuestionIndex = 0;
 
 // Load the current question
