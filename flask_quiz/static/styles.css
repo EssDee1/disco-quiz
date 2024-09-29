@@ -50,10 +50,10 @@ main {
     margin-bottom: 30px; /* Adds space below the question */
 }
 
-/* Add this section to space out the options */
+/* Updated section to space out the options */
 label {
     display: block; /* Makes each label take up a full line */
-    margin: 5px 0; /* Adds space above and below each option */
+    margin: 10px 0; /* Adds more space above and below each option */
 }
 
 button {
@@ -64,6 +64,7 @@ button {
     border-radius: 5px;
     cursor: pointer;
     font-size: 1em;
+    margin-top: 20px; /* Adds space above the button */
 }
 
 button:hover {
