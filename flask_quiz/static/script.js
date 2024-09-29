@@ -158,6 +158,38 @@ document.addEventListener("DOMContentLoaded", function () {
   startDisco();  // Start the disco lights automatically when the page loads
 });
 
+var bgMusic = document.getElementById('bgMusic');
+
+// Make sure the paths to your music files are correct
+var songs = [
+  "/static/music/LEEONA_-_LEEONA_-_Do_I.mp3",
+  "/static/music/LEEONA_-_LEEONA_-_Do_I.mp3",
+  "/static/music/Color_Out_-_Host.mp3",
+  "/static/music/Alone_-_Color_Out.mp3",
+  "/static/music/Alone_-_Color_Out (1).mp3"
+];
+
+// Function to randomly select a song and play it
+function playRandomSong() {
+  var randomIndex = Math.floor(Math.random() * songs.length); // Pick a random index
+  bgMusic.src = songs[randomIndex]; // Set the audio source to the randomly selected song
+
+  // Load the audio and play it
+  bgMusic.load();
+  bgMusic.play().catch(function(error) {
+    console.error("Playback failed: ", error); // Handle playback errors
+  });
+}
+
+// Play a random song on page load, might require user interaction
+window.onload = function() {
+  // Uncomment the following line if you need to wait for user interaction
+  // document.addEventListener('click', playRandomSong);
+  playRandomSong();
+};
+
+// When a song ends, play another random song
+bgMusic.onended = playRandomSong;
 
 let currentQuestionIndex = 0;
 
