@@ -1,12 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <link rel="stylesheet" href="../static/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Website</title>
+    <link rel="stylesheet" href="../static/styles.css">
 </head>
 <body>
+    <div class="container">
+        <header>
+            <h1>Quiz Time!</h1>
+            <p>Test your knowledge with our fun quizzes!</p>
+        </header>
 
-<h1>This is a heading</h1>
-<p>This is a paragraph.</p>
+        <main>
+            <div class="quiz">
+                <h2>Question 1</h2>
+                <p>What is the capital of France?</p>
+                <form id="quiz-form">
+                    <label>
+                        <input type="radio" name="answer" value="Paris"> Paris
+                    </label><br>
+                    <label>
+                        <input type="radio" name="answer" value="London"> London
+                    </label><br>
+                    <label>
+                        <input type="radio" name="answer" value="Berlin"> Berlin
+                    </label><br>
+                    <label>
+                        <input type="radio" name="answer" value="Madrid"> Madrid
+                    </label><br>
+                    <button type="submit">Submit Answer</button>
+                </form>
+            </div>
+        </main>
 
+        <footer>
+            <p>&copy; 2024 Quiz Website. All rights reserved.</p>
+        </footer>
+    </div>
 </body>
 </html>
