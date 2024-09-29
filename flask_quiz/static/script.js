@@ -1,20 +1,105 @@
 // Quiz Questions
 const questions = [
     {
-        question: "What is the capital of France?",
-        options: ["Paris", "London", "Rome", "Berlin"],
-        answer: "Paris",
-    },
-    {
-        question: "What is 2 + 2?",
-        options: ["3", "4", "5", "6"],
-        answer: "4",
-    },
-    {
-        question: "What is the capital of Japan?",
-        options: ["Tokyo", "Beijing", "Seoul", "Bangkok"],
-        answer: "Tokyo",
-    },
+        "question": "Who is known as the 'Queen of Disco'?",
+        "options": ["Gloria Gaynor", "Chaka Khan", "Diana Ross", "Donna Summer"],
+        "answer": "Donna Summer"
+      },
+      {
+        "question": "Which song by Gloria Gaynor became an anthem for survival and empowerment?",
+        "options": ["Stayin' Alive", "Last Dance", "Hot Stuff", "I Will Survive"],
+        "answer": "I Will Survive"
+      },
+      {
+        "question": "Which band performed the iconic disco hit 'Stayin' Alive'?",
+        "options": ["KC and the Sunshine Band", "ABBA", "Chic", "Bee Gees"],
+        "answer": "Bee Gees"
+      },
+      {
+        "question": "Which 1977 movie is credited with popularizing disco culture?",
+        "options": ["Flashdance", "Saturday Night Fever", "Footloose", "Grease"],
+        "answer": "Saturday Night Fever"
+      },
+      {
+        "question": "What famous New York nightclub became synonymous with disco culture?",
+        "options": ["Studio 54", "CBGB", "The Limelight", "The Tunnel"],
+        "answer": "Studio 54"
+      },
+      {
+        "question": "Which Chic song features the famous lyrics 'Ah, freak out!'?",
+        "options": ["Good Times", "Everybody Dance", "Le Freak", "Dance, Dance, Dance"],
+        "answer": "Le Freak"
+      },
+      {
+        "question": "Who was the lead singer of the group Chic?",
+        "options": ["Sister Sledge", "Tony Thompson", "Bernard Edwards", "Nile Rodgers"],
+        "answer": "Nile Rodgers"
+      },
+      {
+        "question": "Which song was a massive hit for KC and the Sunshine Band in 1975?",
+        "options": ["Funky Town", "That's the Way (I Like It)", "Get Down Tonight", "Boogie Shoes"],
+        "answer": "Get Down Tonight"
+      },
+      {
+        "question": "Which famous disco hit by The Trammps is considered an anthem of the disco era?",
+        "options": ["Don't Leave Me This Way", "Le Freak", "Disco Inferno", "Hot Stuff"],
+        "answer": "Disco Inferno"
+      },
+      {
+        "question": "Which Swedish band had several hits during the disco era, including 'Dancing Queen'?",
+        "options": ["ABBA", "Chic", "Bee Gees", "Boney M."],
+        "answer": "ABBA"
+      },
+      {
+        "question": "What was the name of Donna Summer's 1977 hit single that became one of the best-selling disco tracks of all time?",
+        "options": ["Bad Girls", "Hot Stuff", "I Feel Love", "Last Dance"],
+        "answer": "I Feel Love"
+      },
+      {
+        "question": "What year is often cited as the 'death of disco' due to the famous Disco Demolition Night event?",
+        "options": ["1981", "1980", "1979", "1982"],
+        "answer": "1979"
+      },
+      {
+        "question": "Which disco song by Earth, Wind & Fire became a hit in 1978?",
+        "options": ["Let's Groove", "Boogie Wonderland", "September", "Shining Star"],
+        "answer": "September"
+      },
+      {
+        "question": "Which disco group is known for the hit song 'Y.M.C.A.'?",
+        "options": ["Chic", "Village People", "KC and the Sunshine Band", "Bee Gees"],
+        "answer": "Village People"
+      },
+      {
+        "question": "Which Sister Sledge song became a disco anthem of unity and pride in 1979?",
+        "options": ["We Are Family", "Lost in Music", "Greatest Love", "He's the Greatest Dancer"],
+        "answer": "We Are Family"
+      },
+      {
+        "question": "Which Boney M. song, released in 1978, became a disco hit across Europe?",
+        "options": ["Sunny", "Ma Baker", "Rasputin", "Daddy Cool"],
+        "answer": "Rasputin"
+      },
+      {
+        "question": "Which Bee Gees song features the lyrics 'You should be dancing, yeah!'?",
+        "options": ["Jive Talkin'", "You Should Be Dancing", "Night Fever", "Stayin' Alive"],
+        "answer": "You Should Be Dancing"
+      },
+      {
+        "question": "Which 1976 Silver Convention song is considered a classic example of Euro disco?",
+        "options": ["Lady Bump", "Fly, Robin, Fly", "Get Up and Boogie", "Love in C Minor"],
+        "answer": "Fly, Robin, Fly"
+      },
+      {
+        "question": "Which disco duo sang the 1979 hit 'Ring My Bell'?",
+        "options": ["Anita Ward", "Amii Stewart", "Andrea True Connection", "A Taste of Honey"],
+        "answer": "Anita Ward"
+      },
+      {
+        "question": "Which popular 1979 disco song by Sister Sledge was produced by Nile Rodgers?",
+        "options": ["We Are Family", "Lost in Music", "Thinking of You", "He's the Greatest Dancer"],
+        "answer": "He's the Greatest Dancer"
+      },
     // Add more questions as needed
 ];
 
